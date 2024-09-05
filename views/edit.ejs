@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <form action="/edit/<%= id %>" method="POST">
+        <div class="form-group row my-3 mx-0">
+          <label class="col-sm-1 col-form-label">Title</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="title" value="<%= title %>">
+          </div>
+        </div>
+        <div class="form-group row mx-0">
+          <label class="col-sm-1 col-form-label">Post</label>
+          <div class="col-sm-10">
+            <textarea type="textarea" class="form-control" name="post" rows="16"><%= post %></textarea>
+          </div>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-success" value="Save">
+            <input type="reset" class="btn btn-danger" value="Cancel">
+        </div>
+      </form>
+</body>
